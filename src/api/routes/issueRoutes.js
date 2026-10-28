@@ -1,0 +1,11 @@
+const router = require('express').Router();
+const c = require('../controllers/issueController');
+const { authenticate, protectRole } = require('../middelware/authMiddleware');
+const wrap = fn => (req,res,next) => Promise.resolve(fn(req,res)).catch(next);
+router.use(authenticate);
+router.get('/summary', protectRole(['Municipal Admin']), wrap(c.summary));
+router.get('/', wrap(c.listIssues));
+router.post('/', protectRole(['Citizen']), wrap(c.createIssue));
+router.get('/:id', wrap(c.details));
+router.patch('/:id', protectRole(['Staff','Municipal Admin']), wrap(c.updateIssue));
+module.exports = router;
