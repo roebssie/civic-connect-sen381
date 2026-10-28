@@ -4,6 +4,8 @@ This is my public, sanitized portfolio copy of the Civic Connect community-servi
 
 The original team repository is credited here for context: [CarlEls30/SEN381-Project](https://github.com/CarlEls30/SEN381-Project) and [Carl’s GitHub profile](https://github.com/CarlEls30). This copy is maintained under [Roebssie](https://github.com/roebssie) for portfolio and learning purposes.
 
+![Civic Connect interface preview](screenshots/civic-connect-ui.png)
+
 ## What I worked on
 
 - A React/Vite client for citizens, authorised staff, and municipal management.
